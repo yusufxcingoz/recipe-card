@@ -4,6 +4,7 @@ import food from "./assets/food.jpg"; // Tell webpack this JS file uses this ima
 
 function App() {
   const recipeAuthor = "Kodluyoruz";
+  const image = { food };
   const recipeItem = {
     title: "Avokado Ezmeli Taco",
     date: "12 Ocak 2021, Salı",
@@ -20,6 +21,10 @@ function App() {
       <header className="App-header">
         <Card
           /* prop ismi = { değişken } */
+          props={recipeItem}
+          image={image}
+          isLiked={isLiked}
+          likeCount={likeCount}
           author={recipeAuthor}
         />
       </header>
